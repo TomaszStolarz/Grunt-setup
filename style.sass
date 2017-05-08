@@ -1,0 +1,562 @@
+@import url(https://fonts.google.com/specimen/Open+Sans)
+@import url(https://fonts.google.com/specimen/Quicksand)
+
+@mixin border-radius-nonstandard($radius: 50%)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	border-radius: $radius
+	
+@mixin size-width-height($width: 3vw, $height: 3vw)
+	width: $width
+	height: $height
+
+$color-main: #37EEFF
+$font-standard: 16px
+$font-small: 3vw
+
+*
+	box-sizing: border-box
+
+body
+	margin: 0
+	font-family: 'Open Sans', sans-serif
+
+.row:before, 
+.row:after
+	content: ""
+	display: table
+	clear: both
+
+.container
+	max-width: 1200px
+	width: 100%
+	margin: auto
+
+[class*="col-"]
+	width: 100%
+	float: left
+	text-align: center
+
+header
+	background-color: #313332
+	height: 60vw
+	font-size: 5vw
+
+	> nav
+
+		img
+			width: 8%
+			padding: 0
+			margin-left: 46%
+			margin-right: 46%
+
+		ul
+			margin: 0
+			padding: 2px
+			list-style-type: none
+
+			> li
+			
+				> a
+					padding: 2vw 0
+					color: #fff
+					text-decoration: none
+					text-transform: uppercase
+					display: block
+					text-align: center
+					&:active
+						background-color: #D70500
+	
+.hero
+	background-image: url(https://images.pexels.com/photos/45056/pexels-photo-45056.jpeg?h=350&auto=compress&cs=tinysrgb)
+	background-size: cover
+	background-position: center
+	width: 100%
+	height: 45vw
+	position: relative
+	
+	.slogan
+		background-color: rgba(43, 38, 38, 0.2)
+		float: right
+		color: white
+		font-family: "Quicksand"
+		margin-top: 10%
+		font-size: $font-small
+
+		h1
+			font-style: italic
+			font-size: $font-small
+
+	.circle
+		position: absolute
+		bottom: 1%
+		width: 100vw
+		text-align: center
+		padding: 0px
+
+		ul
+			padding: 0px
+
+			> li
+				background: white
+				@include size-width-height
+				
+				@include border-radius-nonstandard
+				list-style-type: none
+				display: inline-block
+				margin: 2vw
+
+.col-1
+	width: 8.33%
+	
+.col-2
+	width: 16.66%
+	
+.col-3
+	width: 25%
+	
+.col-4
+	width: 33.33%
+	
+.col-5
+	width: 41.66%
+	
+.col-6
+	width: 50%
+	
+.col-7
+	width: 58.33%
+	
+.col-8
+	width: 66.66%
+	
+.col-9
+	width: 75%
+	
+.col-10
+	width: 83.33%
+	
+.col-11
+	width: 91.66%
+	
+.col-12
+	width: 100%
+
+[class*="icon-btn"]
+	padding: 3vw
+	font-size: 8vw
+	border: none
+	background-color: black
+	color: white
+	@include border-radius-nonstandard(8%)
+	margin-top: 5vw
+
+section
+
+	> .container
+		margin: 5vw auto
+
+#highlight
+
+	.icon-btn
+		background-color: $color-main
+
+.features
+
+	h1
+		text-transform: uppercase
+		color: $color-main
+		font-size: $font-standard
+
+	p
+		color: lightgray
+		font-size: $font-standard
+
+.featured-works
+
+	text-align: justify
+	padding: 10vw
+	font-size: 18px
+
+	p
+		color: lightgray
+		font-size: $font-standard
+
+	h1
+		text-transform: uppercase
+
+.gallery
+
+	.img-container
+		position: relative
+
+		img
+			width: 100%
+			height: 40vw
+			object-fit: cover
+
+		.layer
+			width: 100%
+			height: 40vw
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(0, 0, 0, 0.5)
+			visibility: visible
+
+			i
+				background-color: white
+				margin: 17vw 5vw
+				font-size: 4.5vw
+
+.hall-of-fame
+	padding: 2vw
+
+	[class*="col-"]
+		position: relative
+		margin: 0 auto
+
+		.layer
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(120, 117, 128, 0.5)
+			color: white
+			visibility: visible
+			position: absolute
+			@include border-radius-nonstandard
+			margin: 0 auto
+			@include size-width-height(50vw, 50vw)
+
+			h3
+				padding-top: 12vw
+				display: block
+				font-size: 8vw
+
+		img
+			@include border-radius-nonstandard
+			margin: 0
+			@include size-width-height(50vw, 50vw)
+
+		h1
+			font-size: 18px
+
+.promotion
+	background-image: url(https://images.pexels.com/photos/51066/pexels-photo-51066.jpeg?h=350&auto=compress&cs=tinysrgb)
+	background-size: cover
+	color: white
+
+	.col-12
+	
+		> img
+			margin-top: 10vw
+			margin-bottom: 0
+			width: 80vw
+
+		h2
+			margin-top: 15px
+			text-align: center
+			font-size: 18px
+
+.numbers
+
+	h1
+		font-weight: 900
+		font-size: 18px
+
+	h4
+		color: $color-main
+		font-size: 18px
+
+footer
+	background-color: gray
+	color: white
+	font-size: 18px
+
+	.line
+		width: 15%
+		height: 0.5vw
+		background-color: white
+		text-align: center
+		float: left
+		margin-top: 44px
+
+	.media-buttons
+		margin: auto
+
+	.icon
+		display: block
+		background-color: $color-main
+		@include size-width-height(20vw, 20vw)
+		border: 2vw solid gray
+		margin: auto
+
+		i
+			text-align: center
+			line-height: 10vw
+
+	.copyrights
+		background-color: black
+
+
+@media (min-width: 768px)
+
+	.col-m-1
+		width: 8.33%
+    	
+	.col-m-2
+		width: 16.66%
+    	
+	.col-m-3
+		width: 25%
+    	
+	.col-m-4
+		width: 33.33%
+    	
+	.col-m-5
+		width: 41.66%
+    	
+	.col-m-6
+		width: 50%
+    
+	.col-m-7
+		width: 58.33%
+    	
+	.col-m-8
+		width: 66.66%
+    	
+	.col-m-9
+		width: 75%
+    	
+	.col-m-10
+		width: 83.33%
+    	
+	.col-m-11
+		width: 91.66%
+    	
+	.col-m-12
+		width: 100%
+
+	.col-m-offset-0
+		margin-left: 0
+    	
+	.col-m-offset-1
+		margin-left: 8.33%
+    	
+	.col-m-offset-2
+		margin-left: 16.66%
+    	
+	.col-m-offset-3
+		margin-left: 25%
+    	
+	.col-m-offset-4
+		margin-left: 33.33%
+		
+	.col-m-offset-5
+		margin-left: 41.66%
+    	
+	.col-m-offset-6
+		margin-left: 50%
+    	
+	.col-m-offset-7
+		margin-left: 58.33%
+    	
+	.col-m-offset-8
+		margin-left: 66.66%
+    	
+	.col-m-offset-9
+		margin-left: 75%
+    	
+	.col-m-offset-10
+		margin-left: 83.33%
+    	
+	.col-m-offset-11
+		margin-left: 91.66%
+    	
+	.col-m-offset-12
+		margin-left: 100%
+
+	header
+		height: 100px
+		font-size: $font-standard
+
+		> nav
+        
+			img
+				margin: 20px
+
+			ul
+				display: inline-block
+				float: right
+				padding: 0
+	
+				> li
+					display: inline-block
+				
+					> a
+						height: 100px
+						line-height: 90px
+						padding: 0 10px
+						&:hover
+							background-color: #D70500
+	
+	.hero
+	
+		.circle
+	    
+			ul
+	        
+				> li
+					background: gray
+					&:hover
+						background-color: white
+	
+	#highlight
+	
+		.icon-btn
+			background-color: black
+	
+	
+		&:hover
+	
+			.icon-btn
+				background-color: $color-main
+	
+			h1
+				color: $color-main
+	
+	.features 
+	
+		h1
+			color: black
+			font-size: $font-small	
+	
+		p
+			color: lightgray
+			font-size: 2vw
+	
+	.featured-works
+		font-size: 4vw
+		padding: 2vw
+	
+		p
+			color: lightgray
+			font-size: 2vw
+	
+	.gallery
+	
+		.img-container
+	
+			.layer
+				visibility: hidden
+	
+			&:hover
+	    
+				.layer
+					visibility: visible
+	
+				i
+					margin: 18.5vw 1.5vw
+					font-size: 2vw
+	
+	.hall-of-fame
+	
+		[class*="col-"]
+	    
+			.layer
+				visibility: hidden
+				width: 20vw
+				height: 20vw
+	
+				h3
+					padding-top: 4vw
+					display: inline-block
+					font-size: 4vw
+	
+			img
+				width: 20vw
+				height: 20vw
+	
+			h1
+				font-size: $font-small
+	
+		.col-m-3		
+	
+			&:hover
+	
+				.layer	
+					visibility: visible
+	
+	.promotion
+	
+		.row
+			display: inline-block
+	
+			.col-m-4
+				max-width: 100%
+	
+				> img
+					margin-top: 10vw
+					margin-left: 4vw
+					width: 140%
+	
+			.col-m-7
+				float: left
+	
+				h2
+					margin-top: 10vw
+					text-align: left
+					font-size: 12px
+					padding-left: 17vw
+	
+				.row
+					margin-right: 50px
+					padding-left: 17vw
+	
+	.numbers
+	
+		h1
+			font-weight: 900
+			font-size: 2vw
+	
+		h4
+			color: $color-main
+			font-size: 2vw
+	
+	footer
+		font-size: 12px
+	
+		.about-us
+			text-align: center
+	
+		.line
+			width: 15%
+			height: 0.1vw
+			margin-top: 30px
+	
+		.phone, 
+		.email,
+		.address
+			font-size: 14px
+			text-align: left
+	
+		.icon
+			display: inline-block
+			width: 30px
+			height: 30px
+			border: 1px solid gray
+			float: center
+			margin-right: 1vw
+	
+			i
+				font-size: $font-standard
+				line-height: 24px
+	
+		.Copyrights
+			font-size: 20px
+
+
+

@@ -1,0 +1,20 @@
+{
+  "name": "cwiczenie",
+  "version": "1.0.0",
+  "description": "this is a test project for modul 7",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Tomasz Stolarz",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
